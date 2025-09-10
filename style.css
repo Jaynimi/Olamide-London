@@ -279,7 +279,7 @@ input[type="tel"]::placeholder {
     height: 40vh;
   }
   .lower-section {
-    height: 60vh;
+    height: 50vh;
   }
 }
 @media (max-width: 400px) {
