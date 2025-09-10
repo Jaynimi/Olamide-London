@@ -75,6 +75,12 @@ body {
 .success-card {
   display: flex;
   flex-direction: column;
+  background-color: white;
+  color: black;
+}
+
+#playAgain {
+  background-color: #F85601;
 }
 
 #entryForm {
@@ -359,6 +365,10 @@ input[type="tel"]::placeholder {
 /* When modal open, prevent document body from scrolling — .no-scroll toggled via JS */
 body.no-scroll {
   overflow: hidden;
+}
+
+#playAgain {
+  width: 80%;
 }
 
 
