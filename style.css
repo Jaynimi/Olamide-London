@@ -235,6 +235,7 @@ input[type="tel"]::placeholder {
 .primary:active { transform:translateY(1px); }
 
 .logos {
+  height: 20%;
   display: flex;
   justify-content: center;   /* center horizontally */
   align-items: center;       /* align vertically */
@@ -245,4 +246,30 @@ input[type="tel"]::placeholder {
 .logos img {
   max-width: 100px;   /* adjust this to control size */
   height: auto;       /* keeps aspect ratio */
+}
+
+@media (min-width: 800px) and (max-width: 1024px) {
+  .card {
+    width: 60%;
+  }
+}
+@media (min-width: 600px) and (max-width: 799px) {
+  .card {
+    width: 75%;
+  }
+}
+@media (max-width: 599px) {
+  .card {
+    width: 90%;
+  }
+  .logos img {
+    max-width: 60px;   /* adjust this to control size */
+    height: auto;       /* keeps aspect ratio */
+  }
+  .form-area {
+    height: 90%;
+  }
+  .logos {
+    height: 10%;
+  }
 }
