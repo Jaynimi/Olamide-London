@@ -275,4 +275,10 @@ input[type="tel"]::placeholder {
   .logos {
     height: 20%;
   }
+  .hero {
+    height: 45vh;
+  }
+  .lower-section {
+    height: 55vh;
+  }
 }
