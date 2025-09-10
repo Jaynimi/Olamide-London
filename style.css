@@ -388,7 +388,7 @@ body.no-scroll {
     height: 40vh;
   }
   .lower-section {
-    height: 50vh;
+    height: 40vh;
   }
 }
 @media (max-width: 400px) {
