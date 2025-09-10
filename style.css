@@ -72,6 +72,11 @@ body {
   align-items: center;
 }
 
+.success-card {
+  display: flex;
+  flex-direction: column;
+}
+
 #entryForm {
   width: 100%;
   padding: 15px 25px;

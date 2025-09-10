@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Success - London With Baddo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <!-- Top half: hero image -->
+      <section class="hero">
+        <div class="win-text">
+          <span class="win-an">win an</span>
+          <span class="win-yellow">all expense paid trip to see</span>
+        </div>
+        <img src="images/banner.png" alt="Hero" class="hero-img" />
+      </section>
+      <section class="lower-section">
+        <div class="form-area">
+          <div class="card success-card">
+            <h2 style="font-size: 1.5rem; margin-bottom: 10px">
+              🎉 Congratulations!
+            </h2>
+            <p>Your entry was successful.</p>
+
+            <div style="margin: 20px 0; text-align: left">
+              <p>
+                <strong>Number of entries:</strong>
+                <span id="entriesCountSuccess"></span>
+              </p>
+              <p>
+                <strong>Total:</strong> ₦<span id="totalPriceSuccess"></span>
+              </p>
+            </div>
+
+            <button id="playAgain" class="primary">PLAY AGAIN</button>
+          </div>
+        </div>
+        <div class="logos">
+          <img src="images/lasho.png" alt="Lasho's Logo" />
+          <img src="images/group8.png" alt="Group8's Logo" />
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // read data from localStorage (saved in form submit)
+      const entries = localStorage.getItem("entries");
+      const total = localStorage.getItem("total");
+
+      document.getElementById("entriesCountSuccess").textContent =
+        entries || "0";
+      document.getElementById("totalPriceSuccess").textContent = total || "0";
+
+      // Play again: go back to main page
+      document.getElementById("playAgain").addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
