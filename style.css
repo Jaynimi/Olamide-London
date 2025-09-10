@@ -282,3 +282,11 @@ input[type="tel"]::placeholder {
     height: 60vh;
   }
 }
+@media (max-width: 400px) {
+  .form-area {
+    height: 60%;
+  }
+  .logos {
+    height: 20%;
+  }
+}
