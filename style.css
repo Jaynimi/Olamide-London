@@ -287,6 +287,6 @@ input[type="tel"]::placeholder {
     max-height: 60%;
   }
   .logos {
-    max-height: 20%;
+    max-height: 15%;
   }
 }
