@@ -270,15 +270,15 @@ input[type="tel"]::placeholder {
     height: auto;       /* keeps aspect ratio */
   }
   .form-area {
-    height: 80%;
+    height: 75%;
   }
   .logos {
-    height: 20%;
+    height: 25%;
   }
   .hero {
-    height: 45vh;
+    height: 40vh;
   }
   .lower-section {
-    height: 55vh;
+    height: 60vh;
   }
 }
