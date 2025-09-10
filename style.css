@@ -257,9 +257,9 @@ input[type="tel"]::placeholder {
   .card {
     width: 75%;
   }
-  #entryForm {
+  /* #entryForm {
     padding: 5px 10px;
-  }
+  } */
 }
 @media (max-width: 599px) {
   .card {
@@ -270,9 +270,9 @@ input[type="tel"]::placeholder {
     height: auto;       /* keeps aspect ratio */
   }
   .form-area {
-    height: 90%;
+    height: 80%;
   }
   .logos {
-    height: 10%;
+    height: 20%;
   }
 }
