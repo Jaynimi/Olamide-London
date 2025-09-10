@@ -133,3 +133,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // updateUI();
   });
 });
+
+// Modal logic
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('termsModal');
+  const openBtn = document.getElementById('openTerms');
+  const closeBtn = document.getElementById('closeModal');
+
+  // Open modal
+  openBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.style.display = 'flex';
+  });
+
+  // Close modal
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  // Close when clicking outside content
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+});
