@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>London With Baddo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <!-- Top half: hero image -->
+      <section class="hero">
+        <div class="win-text">
+          <span class="win-an">win an</span>
+          <span class="win-yellow">all expense paid trip to see</span>
+        </div>
+        <img src="images/banner.png" alt="Hero" class="hero-img" />
+      </section>
+
+      <!-- Bottom half: form area -->
+      <section class="lower-section">
+        <div class="form-area">
+          <div class="card" role="region" aria-labelledby="formTitle">
+            <form id="entryForm" novalidate>
+              <!-- Phone - updated structure -->
+              <label class="field phone-field">
+                <span class="label-text">Phone Number</span>
+
+                <div class="phone-row">
+                  <!-- fixed prefix (not editable) -->
+                  <span class="prefix" aria-hidden="true">+234</span>
+
+                  <!-- user-only input: local 10 digits -->
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    placeholder="e.g 8012345678"
+                    autocomplete="tel-national"
+                    required
+                    aria-describedby="phoneHint phoneError"
+                  />
+                </div>
+
+                <small class="error" id="phoneError" aria-live="polite"></small>
+              </label>
+
+              <!-- Entries row -->
+              <div class="entries-row">
+                <span class="label-text">Entries</span>
+                <div class="entries-controls">
+                  <div class="ctr">
+                    <button
+                      type="button"
+                      id="decrease"
+                      aria-label="Decrease entries"
+                    >
+                      -
+                    </button>
+                    <span id="entriesCount" class="count">1</span>
+                    <button
+                      type="button"
+                      id="increase"
+                      aria-label="Increase entries"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <div class="price">
+                    <span class="price-amount" id="totalPrice">₦500</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Terms -->
+              <label class="terms">
+                <input type="checkbox" id="terms" required />
+                <span>
+                  I declare that I am 18 years of age or above and that I have
+                  read and agree to the
+                  <a href="#" target="_blank" rel="noopener"
+                    >Terms and Conditions</a
+                  >.
+                </span>
+              </label>
+              <small class="error" id="termsError" aria-live="polite"></small>
+
+              <!-- Submit -->
+              <button id="submitBtn" class="primary" type="submit">
+                ENTER TO WIN
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="logos">
+          <img src="images/lasho.png" alt="Lasho's Logo" />
+          <img src="images/group8.png" alt="Group8's Logo" />
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
