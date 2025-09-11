@@ -44,20 +44,6 @@
       </section>
     </main>
 
-    <script>
-      // read data from localStorage (saved in form submit)
-      const entries = localStorage.getItem("entries");
-      const total = localStorage.getItem("total");
-
-      document.getElementById("entriesCountSuccess").textContent =
-        entries || "0";
-      document.getElementById("totalPriceSuccess").textContent = total || "0";
-
-      // Play again: go back to main page
-      document.getElementById("playAgain").addEventListener("click", () => {
-        window.location.href = "index.html";
-      });
-    </script>
     <script src="script.js"></script>
   </body>
 </html>
