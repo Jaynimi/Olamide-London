@@ -407,10 +407,10 @@ body.no-scroll {
     height: 25%;
   }
   .hero {
-    height: 60vh;
+    height: 50vh;
   }
   .lower-section {
-    height: auto;
+    height: 50vh;
   }
 }
 @media (max-width: 400px) {
