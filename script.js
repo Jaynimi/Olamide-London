@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Demo: show confirmation. Replace with your API call as needed.
-    alert(`Entry submitted!\nPhone: ${payload.phone}\nEntries: ${payload.entries}\nTotal: ₦${payload.total.toLocaleString()}`);
+    // alert(`Entry submitted!\nPhone: ${payload.phone}\nEntries: ${payload.entries}\nTotal: ₦${payload.total.toLocaleString()}`);
 
     // OPTIONAL: uncomment if you want to reset form after successful submit
     // form.reset();
