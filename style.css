@@ -381,6 +381,109 @@ body.no-scroll {
   background-color: #bf1924cb;
 }
 
+/* Toast (error) */
+.toast-container {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 28px;
+  z-index: 2000;
+  min-width: 280px;
+  max-width: 90%;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 14px;
+  color: #fff;
+  animation: toast-enter .18s ease-out;
+}
+
+.toast {
+  background: linear-gradient(180deg, rgba(191,25,35,0.96), rgba(153,18,27,0.96));
+  padding: 14px 16px;
+}
+
+.toast h4 {
+  margin: 0 0 8px 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.toast ul {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.35;
+}
+
+.toast ul li { margin-bottom: 6px; }
+
+.toast .close-toast {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.9);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* subtle enter animation */
+@keyframes toast-enter {
+  from { transform: translate(-50%, 16px); opacity: 0; }
+  to { transform: translate(-50%, 0); opacity: 1; }
+}
+
+/* Toast container (fixed at top-right) */
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Toast box */
+.toast {
+  background: #f44336; /* red for error */
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  animation: slideIn 0.3s ease, fadeOut 0.5s ease 4.5s forwards;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+/* Bullet list inside toast */
+.toast ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
 
 @media (min-width: 800px) and (max-width: 1024px) {
   .card {
@@ -423,5 +526,54 @@ body.no-scroll {
   .logos {
     height: 15%;
     max-height: 15%;
+  }
+}
+
+/* Responsive tweaks for toast (smaller on small screens) */
+@media (max-width: 600px) {
+  /* move toast a little closer to the corner and reduce gaps */
+  #toast-container {
+    top: 12px;
+    right: 12px;
+    gap: 8px;
+  }
+
+  .toast {
+    max-width: 260px;       /* slightly narrower */
+    padding: 10px 12px;     /* less padding */
+    font-size: 0.85rem;     /* smaller text */
+    border-radius: 8px;
+  }
+
+  .toast ul {
+    padding-left: 16px;
+  }
+
+  .close-toast {
+    top: 6px;
+    right: 8px;
+    font-size: 16px;
+  }
+}
+
+/* Very small phones: let toast use most of screen width with small margins */
+@media (max-width: 360px) {
+  #toast-container {
+    top: 10px;
+    right: 8px;
+    left: 8px;              /* allow it to fill horizontally with margins */
+    gap: 6px;
+  }
+
+  .toast {
+    max-width: none;
+    width: auto;
+    padding: 9px 10px;
+    font-size: 0.82rem;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.25);
+  }
+
+  .toast ul {
+    padding-left: 14px;
   }
 }
