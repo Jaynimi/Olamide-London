@@ -77,11 +77,18 @@ body {
   align-items: center;
 }
 
+.success-form {
+  min-width: 100%;
+  
+}
+
 .success-card {
   display: flex;
   flex-direction: column;
   background-color: white;
   color: black;
+  padding: 15px 25px;
+  border-radius: 12px;
 }
 
 #playAgain {
@@ -483,6 +490,7 @@ body.no-scroll {
     transform: translateX(100%);
   }
 }
+
 
 
 @media (min-width: 800px) and (max-width: 1024px) {

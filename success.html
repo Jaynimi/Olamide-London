@@ -9,40 +9,48 @@
   <body>
     <main class="page">
       <!-- Top half: hero image -->
-      <section class="hero">
+      <section class="hero" aria-hidden="true">
         <div class="win-text">
           <span class="win-an">win an</span>
           <span class="win-yellow">all expense paid trip to see</span>
         </div>
         <img src="images/banner.png" alt="Hero" class="hero-img" />
       </section>
+
+      <!-- Bottom half: success area -->
       <section class="lower-section">
-        <div class="form-area success-form">
-          <div class="card success-card">
-            <h2 style="font-size: 1.5rem; margin-bottom: 10px">
-              🎉 Congratulations!
-            </h2>
+        <div class="form-area success-form card">
+          <div
+            class="success-card"
+            role="region"
+            aria-labelledby="successTitle"
+          >
+            <h2 id="successTitle">🎉 Congratulations!</h2>
             <p>Your entry was successful.</p>
 
-            <div style="margin: 20px 0">
+            <div class="success-details" aria-live="polite">
               <p>
                 <strong>Number of entries:</strong>
-                <span id="entriesCountSuccess"></span>
+                <span id="entriesCountSuccess">0</span>
               </p>
               <p>
-                <strong>Total:</strong> ₦<span id="totalPriceSuccess"></span>
+                <strong>Total:</strong> ₦<span id="totalPriceSuccess">0</span>
               </p>
             </div>
 
             <button id="playAgain" class="primary">PLAY AGAIN</button>
           </div>
         </div>
-        <div class="logos">
+
+        <div class="logos" aria-hidden="true">
           <img src="images/lasho.png" alt="Lasho's Logo" />
           <img src="images/group8.png" alt="Group8's Logo" />
         </div>
       </section>
     </main>
+
+    <!-- Toast container (script will create it if missing, but having it in HTML avoids layout shift) -->
+    <div id="toast-container" aria-hidden="true"></div>
 
     <script src="script.js"></script>
   </body>
