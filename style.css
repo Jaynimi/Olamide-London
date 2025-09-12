@@ -85,10 +85,46 @@ body {
 .success-card {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   color: black;
   padding: 15px 25px;
   border-radius: 12px;
+  text-align: center;
+}
+
+#successTitle {
+  padding: 8px 0;
+  font-weight: 500;
+}
+#successText {
+  padding-bottom: 5px;
+}
+
+.success-entries {
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+.success-entries strong {
+  padding-right: 30px;
+  font-weight: 400;
+}
+.success-details p span {
+  padding-bottom: 0px;
+}
+.success-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  font-weight: 100;
+}
+.success-price {
+  font-weight: 500;
+  /* margin-left: 10px; */
 }
 
 #playAgain {
@@ -583,5 +619,24 @@ body.no-scroll {
 
   .toast ul {
     padding-left: 14px;
+  }
+}
+
+@media (max-width: 460px) {
+  #successTitle {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+  #successText {
+    font-size: 0.75rem;
+  }
+  .success-entries {
+    font-size: 0.75rem;
+  }
+  .success-details p span {
+    padding-bottom: 0px;
+  }
+  .success-div {
+    font-size: 0.75rem;
   }
 }

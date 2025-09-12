@@ -26,15 +26,18 @@
             aria-labelledby="successTitle"
           >
             <h2 id="successTitle">🎉 Congratulations!</h2>
-            <p>Your entry was successful.</p>
+            <p id="successText">Your entry was successful.</p>
 
             <div class="success-details" aria-live="polite">
-              <p>
+              <p class="success-entries">
                 <strong>Number of entries:</strong>
                 <span id="entriesCountSuccess">0</span>
               </p>
-              <p>
-                <strong>Total:</strong> ₦<span id="totalPriceSuccess">0</span>
+              <p class="success-entries">
+                <div class="success-div">
+                  <strong>Total:</strong> 
+                  <div class="success-price">₦<span id="totalPriceSuccess">0</span></div>
+                </div>
               </p>
             </div>
 
